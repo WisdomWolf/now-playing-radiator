@@ -13,7 +13,8 @@ NowPlaying.prototype = {
         $('#track').text(track.name);
 		$('#track').attr('href', track.url);
 		$('#img').attr('src', track.img);
-		$('#playing').text('#username' + 'currently playing:');
+		$('#playing').text(track.artist + ' - ' + track.name);
+		$('#head').text(username + ' is listening to: ');
     },
     
     update: function()
