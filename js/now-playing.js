@@ -12,6 +12,8 @@ NowPlaying.prototype = {
         $('#artist').text(track.artist);
         $('#track').text(track.name);
 		$('#track').attr('href', track.url);
+		$('#img').attr('src', track.img);
+		$('#playing').text('#username' + 'currently playing:');
     },
     
     update: function()
@@ -35,15 +37,23 @@ NowPlaying.prototype = {
     handleResponse: function(response)
     {
         if (response) {
+			var image;
+			if (response.image[3]['#text']) {
+				image = response.image[3]['#text'];
+			}
+			else {
+				image = "http://www.artsjournal.com/outthere/wp/wp-content/uploads/2011/07/No-Art.jpg";
+			}
             this.display({
                 // The API response can vary depending on the user, so be defensive
                 artist: response.artist['#text'] || response.artist.name,
                 name: response.name,
-				url: response.url
+				url: response.url,
+				img: image
             });
         }
         else {
-            this.display({artist: ' ', name: '', url: ''});
+            this.display({artist: ' ', name: '', url: '', img: ''});
         }
     }
 };

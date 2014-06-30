@@ -37,6 +37,7 @@ LastfmAPI.prototype = {
     
     getNowPlayingTrack: function(user, success, error)
     {
+		$('#username').text(user);
         this.get('user.recenttracks', {user: user}, function(response) {
             var track = response.recenttracks.track[0];
             
