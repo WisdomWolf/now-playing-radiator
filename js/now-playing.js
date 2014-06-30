@@ -11,6 +11,7 @@ NowPlaying.prototype = {
     {        
         $('#artist').text(track.artist);
         $('#track').text(track.name);
+		$('#track').attr('href', track.url);
     },
     
     update: function()
@@ -37,11 +38,12 @@ NowPlaying.prototype = {
             this.display({
                 // The API response can vary depending on the user, so be defensive
                 artist: response.artist['#text'] || response.artist.name,
-                name: response.name
+                name: response.name,
+				url: response.url
             });
         }
         else {
-            this.display({artist: ' ', name: ''});
+            this.display({artist: ' ', name: '', url: ''});
         }
     }
 };
