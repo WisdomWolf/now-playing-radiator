@@ -8,17 +8,14 @@ Handy knowing what's playing without having iTunes open, an information radiator
 
 * 100% client side - Made out of Javascript, CSS and HTML, no server side stuff. Easy to check out and run locally.
 * Super adapatable - It renders well on all devices, big monitors, laptops, phones, tablets and even on the kindle.
-* Near real time - Well, it's polling, but it feels pretty snappy.
+* Near real time - It's polling, but it updates quickly.
 
-"Read more":http://dsingleton.co.uk/blog/last-fm-now-playing-information-radiator about it or try the "demo":http://dsingleton.github.com/now-playing-radiator.
+"Read more":http://dsingleton.co.uk/blog/last-fm-now-playing-information-radiator about it or try the "demo":http://wisdomaws.linkpc.net/lastfm_nowplaying/index.html.
 
 h2. Todo
 
 Some small and large improvements I plan make, in rough order:
 
-* Position footer absolutely, to avoid it jumping about
-* Add page context username/link to top header
-* Adjust default font sizes on extreme devices (mobile / large monitors) for optimal line length
-* Improved context in title bar for easy tab referencing
+* Improve Artwork fetching
 * Improve speed of track change. Smart polling, setup an additional, higher frequency, polling window around the track end (based on duration)
 * Adding more metadata (album art, bio, tags, etc) but keep the default view minimal. Probably a click/key interaction that launches a modal.
