@@ -42,8 +42,14 @@ NowPlaying.prototype = {
 			if (response.image[3]['#text']) {
 				image = response.image[3]['#text'];
 			}
+			else if (response.image[2]['#text']) {
+				image = response.image[2]['#text'];
+			}
+			else if (response.image[1]['#text']) {
+				image = response.image[1]['#text'];
+			}
 			else {
-				image = "http://www.artsjournal.com/outthere/wp/wp-content/uploads/2011/07/No-Art.jpg";
+				image = "http://upload.wikimedia.org/wikipedia/en/5/54/Public_image_ltd_album_cover.jpg";
 			}
             this.display({
                 // The API response can vary depending on the user, so be defensive
